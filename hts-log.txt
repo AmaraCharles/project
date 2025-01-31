@@ -1,0 +1,170 @@
+HTTrack3.49-2+htsswf+htsjava launched on Mon, 20 May 2024 14:55:12 at https://madebydesignesia.com/themes/Bookify/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+Bookify
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://madebydesignesia.com/themes/gigaland/ -O1 "C:\My Web Sites\Bookify" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+
+
+Information, Warnings and Errors reported for this mirror:
+
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,BookifyBookify
+BookifyBookify
+	such as username/password authentication for websites mirrored in this projectBookifyBookify
+BookifyBookify
+	do not share these files/folders if you want these information to remain privateBookifyBookify
+BookifyBookify
+BookifyBookify
+BookifyBookify
+15:03:56	Warning: 	Retry after error -4 (No data (connection closed)) at link hBookifyadebydesignesia.com/themes/gigaland/css/plugins.css (from https://madebydesiBookifyom/themes/gigaland/)
+BookifyBookify
+15:04:28	Warning: 	Retry after error -4 (No data (connection closed)) at link https://madebydesignesia.com/themes/gigaland/Bookifyring-gradient.css (from https://madebydesignesia.com/themes/gigaland/Bookify
+BookifyBookify
+15:13:52	Warning: 	Retry after error -4 (No data (connection closed)) at link https://madebydesignesia.Bookifyes/gigaland/index-9.html (from https://madebydesignesia.com/themes/gigBookify
+BookifyBookify
+15:15:47	Warning: 	Retry after error -4 (No data (connection closed)) at link https://madebydesignesia.com/themes/Bookify/03_grey-index.html (from https://madebydesignesia.com/themes/gigalandBookify
+BookifyBookify
+15:15:59	Warning: 	Retry after error -4 (No data (connection closed)) at link https://madebydesignesia.com/themes/gigaland/Bookifyindex-4.html (from https://madebydesignesia.com/themes/gigaBookify
+BookifyBookify
+15:15:59	Warning: 	Retry after error -5 (error:00000005:lib(0):func(0):DH lib) Bookifyhttps://madebydesignesia.com/themes/gigaland/05_black-index.html (from https://Bookifysignesia.com/themes/gigaland/)
+BookifyBookify
+15:17:32	Warning: 	Retry after error -4 (No data (connection closed)) at link hBookifyadebydesignesia.com/themes/gigaland/05_black-index-3.html (from https:Bookifydesignesia.com/themes/gigaland/)
+BookifyBookify
+15:21:13	Warning: 	Retry after error -4 (No data (connection closed)) at link hBookifyadebydesignesia.com/themes/gigaland/contact.html (from httpsBookifyydesignesia.com/themes/gigaland/)
+BookifyBookify
+15:22:57	Error: 	"Not Found" (404) at link https://madebydesignesia.com/themes/Bookify/url(images/background/21-alt.jpg (from https://madebydesignesiBookifyemes/gigaland/)
+BookifyBookify
+15:23:22	Warning: 	Retry after error -4 (No data (connection closed)) at link hBookifyadebydesignesia.com/themes/gigaland/images/items/static-9.jpg (frBookify://madebydesignesia.com/themes/gigaland/)
+BookifyBookify
+15:23:22	Warning: 	Retry after error -5 (error:00000005:lib(0):func(0):DH lib) Bookifyhttps://madebydesignesia.com/themes/gigaland/images/items/static-5Bookifyom https://madebydesignesia.com/themes/gigaland/)
+BookifyBookify
+15:23:24	Error: 	"Not Found" (404) at link https://madebydesignesia.com/themes/gigaland/grey-author.html (from httBookifyebydesignesia.com/themes/gigaland/)Bookify
+BookifyBookify
+15:23:24	Warning: 	Retry after error -2 (Receive Time Out) at link https://madebydesignesia.com/themes/gigaland/imBookifyms/static-22.jpg (from https://madebydesignesia.com/themes/gigaland/Bookify
+BookifyBookify
+15:23:26	Warning: 	Retry after error -5 (error:00000005:lib(0):func(0):DH lib) at link https://madebydesignesia.coBookify/gigaland/images/items/static-23.jpg (from https://madebydesignesia.Bookifyes/gigaland/)
+BookifyBookify
+15:23:27	Warning: 	Retry after error -4 (No data (connection closed)) at link https://madebydesignesia.com/themes/Bookify/images/items/static-21.jpg (from https://madebydesignesia.com/themesBookifyd/)
+BookifyBookify
+15:23:56	Warning: 	Retry after error -4 (No data (connection closed)) at link https://madebydesignesia.com/themes/gigaland/Bookifyns.js (from https://madebydesignesia.com/themes/gigaland/)Bookify
+BookifyBookify
+15:23:56	Warning: 	Retry after error -5 (error:00000005:lib(0):func(0):DH lib) at link https://madebydesignesia.coBookify/gigaland/css/plugins.css (from https://madebydesignesia.com/themBookifyand/)
+BookifyBookify
+15:24:59	Error: 	"Not Found" (404) at link https://madebydesignesia.com/themes/gigaland/images/ui/arrow-down-form.Bookifym https://madebydesignesia.com/themes/gigaland/css/style.css)Bookify
+BookifyBookify
+15:24:59	Error: 	"Not Found" (404) at link https://madebydesignesia.com/themes/gigaland/images/ui/arrow-down-form-Bookifyg (from https://madebydesignesia.com/themes/gigaland/css/style.cssBookify
+BookifyBookify
+15:24:59	Error: 	"Not Found" (404) at link https://madebydesignesia.com/themes/gigaland/images/dotted.png (from https://madBookifynesia.com/themes/gigaland/css/style.css)Bookify
+BookifyBookify
+15:24:59	Error: 	"Not Found" (404) at link https://madebydesignesia.com/themes/gigaland/images/icon-slide-plus.png (from htBookifydebydesignesia.com/themes/gigaland/css/style.css)Bookify
+BookifyBookify
+15:24:59	Warning: 	Retry after error -4 (No data (connection closed)) at link https://madebydesignesia.com/themes/Bookify/images/icon-slide-min.png (from https://madebydesignesia.com/themBookifyand/css/style.css)
+BookifyBookify
+15:25:00	Error: 	"Not Found" (404) at link https://madebydesignesia.com/themes/gigaland/images/close.png (from httBookifyebydesignesia.com/themes/gigaland/css/style.css)Bookify
+BookifyBookify
+15:25:00	Error: 	"Not Found" (404) at link https://madebydesignesia.com/themes/gigaland/images/close-2.png (from hBookifyadebydesignesia.com/themes/gigaland/css/style.css)Bookify
+BookifyBookify
+15:25:00	Error: 	"Not Found" (404) at link https://madebydesignesia.com/themes/Bookify/images/icon-url.png (from https://madebydesignesia.com/themes/gigalaBookifytyle.css)
+BookifyBookify
+15:25:00	Error: 	"Not Found" (404) at link https://madebydesignesia.com/themes/gigaland/images/icon-zooBookifyrom https://madebydesignesia.com/themes/gigaland/css/style.css)Bookify
+BookifyBookify
+15:25:00	Error: 	"Not Found" (404) at link https://madebydesignesia.com/themes/Bookify/images/list-arrow.png (from https://madebydesignesia.com/themes/gigalanBookifyyle.css)
+BookifyBookify
+15:25:00	Error: 	"Not Found" (404) at link https://madebydesignesia.com/themes/Bookify/images/background/bg-header.jpg (from https://madebydesignesia.Bookifyes/gigaland/css/style.css)
+BookifyBookify
+15:25:00	Error: 	"Not Found" (404) at link https://madebydesignesia.com/themes/Bookify/images/page-loader.gif (from https://madebydesignesia.com/themes/gBookifycss/style.css)
+BookifyBookify
+15:25:00	Warning: 	Retry after error -5 (error:00000005:lib(0):func(0):DH lib) Bookifyhttps://madebydesignesia.com/themes/gigaland/images/wallet/2.png (frBookify://madebydesignesia.com/themes/gigaland/07_modern-index.html)
+BookifyBookify
+15:25:00	Warning: 	Retry after error -4 (No data (connection closed)) at link https://madebydesignesia.com/themes/Bookify/images/author/author-15.jpg (from https://madebydesignesia.com/themes/gigalandBookifyrn-index.html)
+BookifyBookify
+15:25:07	Warning: 	Retry after error -4 (No data (connection closed)) at link https://madebydesignesia.com/themes/Bookify/css/colors/scheme-08.css (from https://madebydesignesia.com/themes/gigaBookifye_index-3.html)
+BookifyBookify
+15:25:12	Warning: 	Retry after error -4 (No data (connection closed)) at link hBookifyadebydesignesia.com/themes/gigaland/video/sample-video-1.mp4 (from httpBookifybydesignesia.com/themes/gigaland/wide_index-3.html)
+BookifyBookify
+15:25:12	Warning: 	Retry after error -5 (error:00000005:lib(0):func(0):DH lib) at link https://madebydesignesia.com/themes/gigaland/images/collections/coll-3.jpg (from https://madebydesignesia.com/themes/gigaland/wide_index-3.html)
+
+15:25:12	Warning: 	Retry after error -4 (No data (connection closed)) at link https://madebydesignesia.com/themes/gigaland/css/colors/scheme-07.css (from https://madebydesignesia.com/themes/gigaland/06_clivus-index.html)
+
+15:25:26	Warning: 	Retry after error -4 (No data (connection closed)) at link https://madebydesignesia.com/themes/gigaland/03_grey-profile.html (from https://madebydesignesia.com/themes/gigaland/06_clivus-index.html)
+
+15:25:34	Warning: 	Retry after error -4 (No data (connection closed)) at link https://madebydesignesia.com/themes/gigaland/images/carousel/crs-8.jpg (from https://madebydesignesia.com/themes/gigaland/06_clivus-index.html)
+
+15:25:34	Warning: 	Retry after error -4 (No data (connection closed)) at link https://madebydesignesia.com/themes/gigaland/images/logo-2.png (from https://madebydesignesia.com/themes/gigaland/index-4.html)
+
+15:25:34	Warning: 	Retry after error -5 (error:00000005:lib(0):func(0):DH lib) at link https://madebydesignesia.com/themes/gigaland/images/items/music-2.jpg (from https://madebydesignesia.com/themes/gigaland/index-7.html)
+
+15:25:37	Warning: 	Retry after error -5 (error:00000005:lib(0):func(0):DH lib) at link https://madebydesignesia.com/themes/gigaland/images/items/music-3.jpg (from https://madebydesignesia.com/themes/gigaland/index-7.html)
+
+15:26:06	Warning: 	Retry after error -4 (No data (connection closed)) at link https://madebydesignesia.com/themes/gigaland/02_dark-register.html (from https://madebydesignesia.com/themes/gigaland/02_dark-index.html)
+
+15:26:06	Warning: 	Retry after error -4 (No data (connection closed)) at link https://madebydesignesia.com/themes/gigaland/02_dark-rankings.html (from https://madebydesignesia.com/themes/gigaland/02_dark-index.html)
+
+15:26:07	Warning: 	Retry after error -4 (No data (connection closed)) at link https://madebydesignesia.com/themes/gigaland/images/icon-yellow.png (from https://madebydesignesia.com/themes/gigaland/05_black-index.html)
+
+15:26:14	Warning: 	Retry after error -4 (No data (connection closed)) at link https://madebydesignesia.com/themes/gigaland/05_black-help-center.html (from https://madebydesignesia.com/themes/gigaland/05_black-index.html)
+
+15:26:24	Warning: 	Retry after error -4 (No data (connection closed)) at link https://madebydesignesia.com/themes/gigaland/05_black-activity.html (from https://madebydesignesia.com/themes/gigaland/05_black-index.html)
+
+15:26:24	Warning: 	Retry after error -4 (Connect Error) at link https://madebydesignesia.com/themes/gigaland/05_black-rankings.html (from https://madebydesignesia.com/themes/gigaland/05_black-index.html)
+
+15:26:24	Warning: 	Retry after error -5 (error:00000005:lib(0):func(0):DH lib) at link https://madebydesignesia.com/themes/gigaland/images/carousel/crs-10.jpg (from https://madebydesignesia.com/themes/gigaland/05_black-index.html)
+
+15:26:37	Warning: 	Retry after error -4 (No data (connection closed)) at link https://madebydesignesia.com/themes/gigaland/04_retro-login.html (from https://madebydesignesia.com/themes/gigaland/04_retro-index.html)
+
+15:26:37	Warning: 	Retry after error -5 (error:00000005:lib(0):func(0):DH lib) at link https://madebydesignesia.com/themes/gigaland/images/collections/coll-item-3.jpg (from https://madebydesignesia.com/themes/gigaland/collection.html)
+
+15:26:37	Warning: 	Retry after error -5 (error:00000005:lib(0):func(0):DH lib) at link https://madebydesignesia.com/themes/gigaland/images/collections/coll-thumbnail-1.jpg (from https://madebydesignesia.com/themes/gigaland/item-details.html)
+
+15:26:39	Warning: 	Retry after error -4 (No data (connection closed)) at link https://madebydesignesia.com/themes/gigaland/images/news/news-1.jpg (from https://madebydesignesia.com/themes/gigaland/news.html)
+
+15:26:40	Warning: 	Retry after error -5 (error:00000005:lib(0):func(0):DH lib) at link https://madebydesignesia.com/themes/gigaland/images/items/thumbnail-2.jpg (from https://madebydesignesia.com/themes/gigaland/activity.html)
+
+15:26:42	Warning: 	Retry after error -4 (No data (connection closed)) at link https://madebydesignesia.com/themes/gigaland/images/items/thumbnail-4.jpg (from https://madebydesignesia.com/themes/gigaland/activity.html)
+
+15:26:43	Warning: 	Retry after error -4 (No data (connection closed)) at link https://madebydesignesia.com/themes/gigaland/fonts/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 (from https://madebydesignesia.com/themes/gigaland/fonts/font-awesome/css/font-awesome.css)
+
+15:26:44	Warning: 	Retry after error -4 (No data (connection closed)) at link https://madebydesignesia.com/themes/gigaland/fonts/elegant_font/HTML_CSS/fonts/ElegantIcons.ttf (from https://madebydesignesia.com/themes/gigaland/fonts/elegant_font/HTML_CSS/style.css)
+
+15:26:46	Warning: 	Retry after error -4 (No data (connection closed)) at link https://madebydesignesia.com/themes/gigaland/fonts/icofont/fonts/icofont.woff (from https://madebydesignesia.com/themes/gigaland/fonts/icofont/icofont.min.css)
+
+15:26:47	Error: 	"Not Found" (404) at link https://madebydesignesia.com/themes/gigaland/images/icon-slide-min.png (from https://madebydesignesia.com/themes/gigaland/css/style.css)
+
+15:26:47	Warning: 	Retry after error -4 (No data (connection closed)) at link https://madebydesignesia.com/themes/gigaland/images/items/big-5.jpg (from https://madebydesignesia.com/themes/gigaland/item-details-audio.html)
+
+15:27:22	Warning: 	Retry after error -2 (Receive Time Out) at link https://madebydesignesia.com/themes/gigaland/video/sample-video-1.mp4 (from https://madebydesignesia.com/themes/gigaland/wide_index-3.html)
+
+15:27:22	Error: 	"Not Found" (404) at link https://madebydesignesia.com/themes/gigaland/css/bootstrap-grid.min.css (from https://madebydesignesia.com/themes/gigaland/03_grey-collection.html)
+
+15:27:22	Error: 	"Not Found" (404) at link https://madebydesignesia.com/themes/gigaland/css/bootstrap-reboot.min.css (from https://madebydesignesia.com/themes/gigaland/03_grey-collection.html)
+
+15:27:22	Error: 	"Not Found" (404) at link https://madebydesignesia.com/themes/gigaland/css/animate.css (from https://madebydesignesia.com/themes/gigaland/03_grey-collection.html)
+
+15:27:22	Error: 	"Not Found" (404) at link https://madebydesignesia.com/themes/gigaland/css/owl.carousel.css (from https://madebydesignesia.com/themes/gigaland/03_grey-collection.html)
+
+15:27:22	Error: 	"Not Found" (404) at link https://madebydesignesia.com/themes/gigaland/css/owl.theme.css (from https://madebydesignesia.com/themes/gigaland/03_grey-collection.html)
+
+15:27:22	Error: 	"Not Found" (404) at link https://madebydesignesia.com/themes/gigaland/css/owl.transitions.css (from https://madebydesignesia.com/themes/gigaland/03_grey-collection.html)
+
+15:27:22	Error: 	"Not Found" (404) at link https://madebydesignesia.com/themes/gigaland/css/magnific-popup.css (from https://madebydesignesia.com/themes/gigaland/03_grey-collection.html)
+
+15:27:22	Error: 	"Not Found" (404) at link https://madebydesignesia.com/themes/gigaland/css/jquery.countdown.css (from https://madebydesignesia.com/themes/gigaland/03_grey-collection.html)
+
+15:27:25	Warning: 	Retry after error -4 (No data (connection closed)) at link https://madebydesignesia.com/themes/gigaland/02_dark-rankings.html (from https://madebydesignesia.com/themes/gigaland/02_dark-index.html)
+
+15:27:25	Warning: 	Retry after error -4 (No data (connection closed)) at link https://madebydesignesia.com/themes/gigaland/images/misc/black-coll-multiple.png (from https://madebydesignesia.com/themes/gigaland/05_black-create-options.html)
+
+15:27:25	Warning: 	Retry after error -4 (No data (connection closed)) at link https://madebydesignesia.com/themes/gigaland/05_black-news-single.html (from https://madebydesignesia.com/themes/gigaland/05_black-index-3.html)
+
+15:27:26	Warning: 	Retry after error -4 (No data (connection closed)) at link https://madebydesignesia.com/themes/gigaland/04_retro-04_grey-author.html (from https://madebydesignesia.com/themes/gigaland/04_retro-item-details.html)
+
+15:27:28	Error: 	"Not Found" (404) at link https://madebydesignesia.com/themes/gigaland/css/owl.video.play.png (from https://madebydesignesia.com/themes/gigaland/css/plugins.css)
+
+15:27:29	Error: 	"Not Found" (404) at link https://madebydesignesia.com/themes/gigaland/02_dark-02_dark-author.html (from https://madebydesignesia.com/themes/gigaland/02_dark-item-details-audio.html)
+
+15:27:30	Error: 	"Not Found" (404) at link https://madebydesignesia.com/themes/gigaland/04_retro-04_grey-author.html (from https://madebydesignesia.com/themes/gigaland/04_retro-item-details.html)
+
+
+
+HTTrack Website Copier/3.49-2 mirror complete in 32 minutes 18 seconds : 471 links scanned, 396 files written (27409121 bytes overall) [19124243 bytes received at 9868 bytes/sec], 9830914 bytes transferred using HTTP compression in 184 files, ratio 12%, 2.0 requests per connection
+
+(25 errors, 49 warnings, 0 messages)
+

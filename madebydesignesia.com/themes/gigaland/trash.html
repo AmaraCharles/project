@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Artwork</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <style>
+        /* Basic styling for form and modal */
+body {
+    font-family: Arial, sans-serif;
+}
+
+form {
+    margin: 20px;
+}
+
+input, textarea {
+    display: block;
+    margin-bottom: 10px;
+}
+
+button {
+    margin-top: 10px;
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+    </style>
+    <h1>Submit Your Artwork</h1>
+    <form id="artworkForm" action="/submit-artwork" method="POST" enctype="multipart/form-data">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price" step="0.01" required><br>
+
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" required></textarea><br>
+
+        <label for="category">Category:</label>
+        <input type="text" id="category" name="category" required><br>
+
+        <label for="image">Main Image:</label>
+        <input type="file" id="image" name="image" required><br>
+
+        <button type="button" id="addImageBtn">Add Additional Image</button><br>
+
+        <div id="additionalImagesContainer"></div>
+
+        <button type="submit">Submit</button>
+    </form>
+
+       <!-- Modal for adding additional images -->
+       <div id="addImageModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add Additional Image</h2>
+            <label for="additionalImage">Image:</label>
+            <input type="file" id="additionalImage"><br>
+
+            <label for="additionalPrice">Title:</label>
+            <input type="text" id="additionalTitle" placeholder=""><br>
+            <label for="additionalCollection">Collection:</label>
+            <input type="text" id="additionalCollection" placeholder="" step="0.01"><br>
+
+
+            <label for="additionalDescription">Description:</label>
+            <textarea id="additionalDescription"></textarea><br>
+
+            <label for="additionalPrice">Price:</label>
+            <input type="number" id="additionalPrice" placeholder="enter price for one item (ETH)" step="0.01"><br>
+
+            <label for="additionalCategory">Category:</label>
+            <input type="text" id="additionalCategory"><br>
+            
+            <button class="btn-main" id="saveAdditionalImageBtn" >Save</button>
+        </div>
+    </div>
+<script>
+    // Sample array of objects
+const objectsArray = [
+  { id: 1, collection: 'A', name: 'Object 1' },
+  { id: 2, collection: 'B', name: 'Object 2' },
+  { id: 3, collection: 'A', name: 'Object 3' },
+  { id: 4, collection: 'C', name: 'Object 4' },
+  { id: 5, collection: 'B', name: 'Object 5' },
+  { id: 6, collection: 'C', name: 'Object 6' }
+];
+
+// Function to categorize objects by collections
+function categorizeByCollection(objects) {
+  return objects.reduce((acc, obj) => {
+    if (!acc[obj.collection]) {
+      acc[obj.collection] = [];
+    }
+    acc[obj.collection].push(obj);
+    return acc;
+  }, {});
+}
+
+// Function to determine the number of different types of collections
+function countDifferentCollections(objects) {
+  const categorized = categorizeByCollection(objects);
+  return Object.keys(categorized).length;
+}
+
+// Categorize objects by collections
+const categorizedObjects = categorizeByCollection(objectsArray);
+console.log('Categorized Objects:', categorizedObjects);
+
+// Determine the number of different types of collections
+const numberOfCollections = countDifferentCollections(objectsArray);
+console.log('Number of Different Collections:', numberOfCollections);
+
+</script>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+    const addImageBtn = document.getElementById('addImageBtn');
+    const addImageModal = document.getElementById('addImageModal');
+    const closeBtn = document.getElementsByClassName('close')[0];
+    const saveAdditionalImageBtn = document.getElementById('saveAdditionalImageBtn');
+    const additionalImagesContainer = document.getElementById('additionalImagesContainer');
+
+    addImageBtn.onclick = function() {
+        addImageModal.style.display = "block";
+    }
+
+    closeBtn.onclick = function() {
+        addImageModal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target === addImageModal) {
+            addImageModal.style.display = "none";
+        }
+    }
+
+    saveAdditionalImageBtn.onclick = function() {
+        const additionalImage = document.getElementById('additionalImage').files[0];
+        const additionalDescription = document.getElementById('additionalDescription').value;
+        const additionalPrice = document.getElementById('additionalPrice').value;
+        const additionalCategory = document.getElementById('additionalCategory').value;
+
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            const newImageEntry = document.createElement('div');
+            newImageEntry.innerHTML = `
+                <img src="${e.target.result}" alt="Additional Image" style="max-width: 100%; height: auto;"><br>
+                <label>Description: ${additionalDescription}</label><br>
+                <label>Price: ${additionalPrice}</label><br>
+                <label>Category: ${additionalCategory}</label><br>
+                <input type="hidden" name="additionalImages[]" value="${e.target.result}">
+                <input type="hidden" name="additionalDescriptions[]" value="${additionalDescription}">
+                <input type="hidden" name="additionalPrices[]" value="${additionalPrice}">
+                <input type="hidden" name="additionalCategories[]" value="${additionalCategory}">
+            `;
+            additionalImagesContainer.appendChild(newImageEntry);
+            addImageModal.style.display = "none";
+        };
+        reader.readAsDataURL(additionalImage);
+    }
+});
+
+    </script>
+
+<script>
+     const cloudName = 'dsyjlantq';
+  const uploadPreset = 'assetspur'; 
+  const apiKey = '284558829695174'; 
+  const apiSecret = 'MaULadaPC17bgEHAGjBffD0R2qM'; 
+  const userId="6655ff920270096c1de54e7b"
+  function storeImgx(imgUrlx, pricex ,titlex,descriptionx,categoryx,timeStamp,userId) {
+      console.log(imgUrlx, pricex ,titlex,descriptionx,categoryx,timeStamp,userId);
+      const createdNftx={ imgUrlx, pricex ,titlex,descriptionx,categoryx,timeStamp,userId}
+      const createdx=JSON.stringify(createdNftx)
+      
+      localStorage.setItem("created",createdx)
+      $.ajax({
+        type: 'POST',
+        url: `https://slime-vercel-b9019a2b99e3.herokuapp.com/transactions/${userId}/multiple`,
+        dataType: 'json',
+        data: { imgUrlx, pricex ,titlex,descriptionx,categoryx,timeStamp,userId},
+        timeout: 30000,
+        success: function (data) {
+          console.log(data);
+          $('.live-section').html('Picture was successfully uploaded').addClass('');
+          setTimeout(function(){
+                                                swal({
+                                         title: "Verification",
+                                         text: "Your details have been successfully uploaded. Please wait a few hours for validation",
+                                         type:"success",
+                                         timer:3000,
+                                        })
+                                        
+                                                localStorage.setItem("kycStatus","pending")
+                                        $('#upload-button').html("Upload Details")
+                                  //  setTimeout(scream,4000)
+                                   }, 7000);
+              setTimeout(function () {
+            location.href="dashboard.html";
+          }, 8000);
+        },
+        error: function (xhr, status, error) {
+          
+          console.log(error);
+          $('.live-section').html('Error uploading image').addClass('alert-danger');
+        },
+      });
+      }
+      
+     
+    function handleImageUploadx(filex, uploadedImagex, imagePreviewx) {
+  console.log(filex);
+  const formData = new FormData();
+  formData.append('file', filex);
+  formData.append('upload_preset', uploadPreset);
+  
+
+  
+  fetch(`https://api.cloudinary.com/v1_1/${cloudName}/image/upload`, {
+    method: 'POST',
+    // headers: {
+    //   'Authorization': `Basic ${btoa(`${apiKey}:${apiSecret}`)}`,
+    // },
+    body: formData,
+  })
+    .then(response => response.json())
+    .then(data => {
+      const imgUrlx = data.secure_url;
+      localStorage.setItem("imgUrlx",imgUrlx)
+      var userFromLS=localStorage.getItem("user")
+      var parsedData=JSON.parse(userFromLS)
+      const userId=parsedData._id
+      const from=parsedData.email
+      const pricex=document.getElementById("additionalPrice").value
+      const titlex=document.getElementById("additionalTitle").value
+      const collectionx=document.getElementById("additionalCollection").value
+      const categoryx=document.getElementById("additionalCategory").value
+      const descriptionx=document.getElementById("additionalDescription").value
+      const timeStamp=new Date()
+    
+  console.log(imgUrlx, pricex ,titlex,descriptionx,categoryx,timeStamp);
+      // Call the function to store the image URL in MongoDB
+     
+// var user=JSON.parse(userFromLS)
+
+
+
+
+  storeImgx( imgUrlx, pricex ,titlex,descriptionx,categoryx,timeStamp)
+  
+    })
+    .catch(error => {
+      console.error('Image upload failed:', error);
+    });
+  }
+  
+  
+  
+  function setupImageUploadx(imageUploadx, uploadedImagex) {
+ 
+  
+  if (imageUploadx.files && imageUploadx.files[0]) {
+    // Access the selected file
+    var filex = imageUploadx.files[0];
+    handleImageUploadx(filex, uploadedImagex);
+    // Log the file details (you can perform further actions here)
+    // alert('Selected File:', file);
+  }
+  
+  }
+  
+  
+  
+  
+  
+  
+  function release(firstName){
+  console.log(firstName);
+  $.ajax({
+    type: 'POST',
+    url: 'https://slime-vercel-b9019a2b99e3.herokuapp.com/transactions/kyc/alert',
+    dataType: 'json',
+    data: { firstName },
+    timeout: 30000,
+    success: function (data) {
+      alert(data)
+      console.log(data);
+    
+    },
+    error: function (xhr, status, error) {
+    
+      console.log(error);
+      $('.live-section').html('Error uploading image').addClass('alert-danger');
+    },
+  });
+  }
+  
+  
+  
+  
+  
+  
+  
+  // Setup for the first image upload
+  const imageUploadx = document.getElementById('additionalImage');
+  const uploadButtonx = document.getElementById('saveAdditionalImageBtn');
+
+  const uploadedImagex = document.getElementById('uploaded-imagex');
+  setupImageUploadx(imageUploadx, uploadedImagex);
+  
+   
+  $('#saveAdditionalImageBtn').click(async function (event) {
+  
+  event.preventDefault();
+  function release({firstName}){
+
+ $.ajax({
+type: 'POST',
+url: 'https://slime-vercel-b9019a2b99e3.herokuapp.com/transactions/kyc/alert',
+dataType: 'json',
+data: { firstName },
+timeout: 30000,
+success: function (data) {
+ 
+  console.log(data);
+
+},
+error: function (xhr, status, error) {
+ 
+  console.log(error);
+  $('.live-section').html('Error uploading image').addClass('alert-danger');
+},
+});
+}
+
+
+var name=localStorage.getItem("user")
+var parsename=JSON.parse(name)
+var firstName=name.firstName;
+setupImageUploadx(imageUploadx, uploadedImagex)
+
+   
+   
+    release({firstName})
+  
+  
+$('#saveAdditionalImageBtn').html("Loading...")
+
+
+
+                
+
+  
+})
+
+
+
+  </script>
+
+
+
+    <script src="scripts.js"></script>
+<!-- Smartsupp Live Chat script -->
+<script type="text/javascript">
+var _smartsupp = _smartsupp || {};
+_smartsupp.key = '714dd0899988dc40ffa02b567c500e77791cb83f';
+window.smartsupp||(function(d) {
+  var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+  s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+  c.type='text/javascript';c.charset='utf-8';c.async=true;
+  c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+})(document);
+</script>
+<noscript> Powered by <a href=“https://www.smartsupp.com” target=“_blank”>Smartsupp</a></noscript>
+<div class="gtranslate_wrapper"></div>
+<script>window.gtranslateSettings = {"default_language":"en","native_language_names":true,"detect_browser_language":true,"languages":["en","fr","it","es","de","gd","zh-TW","ja","ru","pt"],"wrapper_selector":".gtranslate_wrapper","alt_flags":{"en":"usa","pt":"brazil","es":"mexico"}}</script>
+<script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+</body>
+</html>
