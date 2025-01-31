@@ -359,7 +359,7 @@
                    return response.data
                  }
                  function hail(object){ 
-                     const selected = decodeURIComponent(object);
+                     const selected = object;
                          localStorage.setItem("pricing",selected)
                          location.href="buy.html"
                          }
@@ -381,9 +381,9 @@ const img = document.getElementById("banner-img");
 // Check if the image element exists
 if (img) {
     // Check if the retrieved category is "Sculpture"
-    if (cat === "Sculptures") {
+    if (cat === "Law") {
         // Set the image source to "sculpture.png"
-        img.src = "sculpture.png";
+        img.src = "law.png";
         console.log("Image source set to sculpture.png");
     } 
     
@@ -416,22 +416,32 @@ if (img) {
             $("#categoryName").html(cat)
          // Assuming fetchUserInfo() is a defined function that fetches user information
          // const userLis =localStorage.getItem("users")
-     const userList=await fetchUserInfo()
+    //  const userList=await fetchUserInfo()
      var chosenCategory=localStorage.getItem("categoriesLink")
-         userList.forEach(user => {
+        
+
             
-            
-             console.log("all users artworks can be seen below"+user.artWorks);
-          user.artWorks.forEach(artwork => {
+            //  console.log("all users artworks can be seen below"+user.artWorks);
+             var localArts=localStorage.getItem("localArt")
+             var localArt=JSON.parse(localArts)
+             console.log(localArt);
+             
+          localArt.forEach(artwork => {
             const container = $('#image-container');
     container.empty(); // Clear the loading message
 
-  if (artwork.status !== "Sold" && artwork.category === chosenCategory) {
+    console.log(artwork);
+    
+  if (artwork.genre === chosenCategory) {
+   
     const artworkJson = encodeURIComponent(JSON.stringify(artwork));
-    if(artwork.status=="unlisted"){
+           
+    if(!artwork){
             console.log(artwork.title+ "not listed yet");
         }
         else{
+
+            
     const artworkHtml = `
       <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
         <div class="nft__item">
@@ -443,7 +453,7 @@ if (img) {
           </div>
           <div class="nft__item_wrap">
             <a href="" onclick='hail("${artworkJson}")'>
-              <img src="${artwork.imgUrl}" class="lazy nft__item_preview" alt="Image loading..." onerror="this.onerror=null; this.src='path/to/placeholder-image.jpg';" style="max-width: 100%; height: auto;">
+              <img src="${artwork.image}" class="lazy nft__item_preview" alt="Image loading..." onerror="this.onerror=null; this.src='path/to/placeholder-image.jpg';" style="max-width: 100%; height: auto;">
             </a>
           </div>
           <div class="nft__item_info">
@@ -454,10 +464,10 @@ if (img) {
               <span></span>
             </div>
             <div class="nft__item_price">
-              ${artwork.price} ETH<span></span>
+              $${artwork.price}<span></span>
             </div>
             <div class="nft__item_like">
-              <i class="fa fa-eye"></i><span> ${artwork.views}</span>
+              <i class="fa fa-eye"></i><span> ${artwork.pages}</span>
             </div>
             <a  class="hailed_button" onclick='hail2("${artworkJson}")'>Buy Now</a>
           </div>
@@ -473,62 +483,8 @@ if (img) {
      
        
 
-       
-         var findCollectionName="";
-             var collectionName=document.getElementById("categoryName")
-
-         userList.forEach(user => {
-             console.log(user.collections);
-             var chosenCollection=localStorage.getItem("categoriesLink")
-             console.log("all users collections can be seen below"+user.collections);
-            
-             user.collections.forEach(collection => {
-                 if (collection.status != "Sold" && collection.category==chosenCollection) {
-                    const collectionJson = encodeURIComponent(JSON.stringify(collection));
-                    //  alert(findCollectionName)
-                    collectionName.innerHTML=chosenCollection;
-                    if(collection.status=="unlisted"){
-            console.log(collection.title+ "not listed yet");
-        }
-        else{
-                     const collectionHtml = `
-                         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                             <div class="nft__item">
-                                 <div class="author_list_pp">
-                                     <a href="author.html">
-                                         <img class="lazy" src="images/author/author-1.jpg" alt="" style="max-width: 100%; height: auto;">
-                                         <i class="fa fa-check"></i>
-                                     </a>
-                                 </div>
-                                 <div class="nft__item_wrap">
-                                     <a href="" onclick='hail("${collectionJson}")'>
-                                         <img src="${collection.imgUrl}" class="lazy nft__item_preview" alt="Image loading..." onerror="this.onerror=null; this.src='path/to/placeholder-image.jpg';" style="max-width: 100%; height: auto;">
-                                     </a>
-                                 </div>
-                                 <div class="nft__item_info">
-                                     <a href="" onclick='hail("${collectionJson}")'>
-                                         <h4>${collection.title}</h4>
-                                     </a>
-                                     <div class="nft__item_click">
-                                         <span></span>
-                                     </div>
-                                     <div class="nft__item_price">
-                                         ${collection.price} ETH<span></span>
-                                     </div>
-                                     <div class="nft__item_like">
-                                         <i class="fa fa-eye"></i><span> ${collection.views}</span>
-                                     </div>
-                                     <a  class="hailed_button" onclick='hail("${collectionJson}")'>Buy Now</a>
-                                 </div>
-                             </div>
-                         </div>
-                     `;
-                     $('#collectionContainer').append(collectionHtml);
-                        }
-                 }
-             });
-         });
-     });
+     
+    
      
          </script>
      
