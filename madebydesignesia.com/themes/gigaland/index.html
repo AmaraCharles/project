@@ -517,40 +517,42 @@
                                     </div>
 
                                     <div class="nft_pic nft_multi masonry">
-                                        <a onclick="viewArt()" class="item">
+                                        <a onclick="carry(this)" class="item" data-value="7">
                                             <div class="nft_pic_title">
-                                                <h4>Buccocervical</h4>
-                                                <span>Ida Chapman</span>
+                                                <h4>Engineering Statistics</h4>
+                                                <span>Aldous Huxley</span>
                                             </div>
-                                            <img src="images/items-alt/static-9.jpg" class="lazy img-fluid" alt="">
+                                            <img src="./books/statseng.webp" class="lazy img-fluid" alt="">
                                         </a>
-                                        <a onclick="viewArt()" class="item pic-tall">
+                                        <a onclick="carry(this)" class="item" data-value="5">
                                             <div class="nft_pic_title">
-                                                <h4>Hotdog Guy</h4>
-                                                <span>Gayle Hicks</span>
+                                                <h4>The Law of Tax-Exempt</h4>
+                                                <span>J.D. Salinger</span>
                                             </div>
-                                            <img src="images/items/static-20.jpg" class="lazy img-fluid" alt="">
+                                            <img src="./books/taxlaw.webp" class="lazy img-fluid" alt="">
                                         </a>
-                                        <a onclick="viewArt()" class="item">
+                                        <a onclick="carry(this)" class="item" data-value="3">
                                             <div class="nft_pic_title">
-                                                <h4>Loop Donut</h4>
-                                                <span>Lori Hart</span>
+                                                <h4>Medicine Management Skills</h4>
+                                                <span>Harper Lee</span>
                                             </div>
-                                            <img src="images/items/anim-5.webp" class="lazy img-fluid" alt="">
+                                            <img src="./books/nursemed.webp" class="lazy img-fluid" alt="">
                                         </a>
                                     </div>
 
                                     <div class="nft_pic">                            
-                                        <a onclick="viewArt()">
+                                        <a onclick="carry(this)" data-value="2">
                                             <span class="nft_pic_info">
-                                                <span class="nft_pic_title">Disconancy Epichorion</span>
-                                                <span class="nft_pic_by">Monica Lucas</span>
+                                                <span class="nft_pic_title">Cloud computing</span>
+                                                <span class="nft_pic_by">George Orwell",
+                                                </span>
                                             </span>
                                         </a>
                                         <div class="nft_pic_wrap">
-                                            <video autoplay muted loop playsinline preload="metadata">
+                                            <!-- <video autoplay muted loop playsinline preload="metadata">
                                                 <source src="video/sample-video-5.mp4" type="video/mp4">
-                                            </video>
+                                            </video> -->
+                                            <img src="./books/cloudcompsci.webp" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -1231,7 +1233,7 @@ location.href="categories.html"
         language: "English",
         rating: 4.4,
         department: "engineering",
-        image: "./thermoeng.webp"
+        image: "./books/thermoeng.webp"
     },
     {
         id: 1,
@@ -1248,7 +1250,7 @@ location.href="categories.html"
         language: "English",
         rating: 4.4,
         department: "engineering",
-        image: "./thermoeng.webp"
+        image: "./books/thermoeng.webp"
     },
     {
         id: 2,
@@ -1265,7 +1267,7 @@ location.href="categories.html"
         language: "English",
         rating: 4.7,
         department: "computer science",
-        image: "./cloudcompsci.webp"
+        image: "./books/cloudcompsci.webp"
     },
     {
         id: 3,
@@ -1282,7 +1284,7 @@ location.href="categories.html"
         language: "English",
         rating: 4.8,
         department: "medicine",
-        image: "./nursemed.webp"
+        image: "./books/nursemed.webp"
     },
     {
         id: 4,
@@ -1299,7 +1301,7 @@ location.href="categories.html"
         language: "English",
         rating: 4.0,
         department: "arts",
-        image: "./romart.webp"
+        image: "./books/romart.webp"
     },
     {
         id: 5,
@@ -1316,7 +1318,7 @@ location.href="categories.html"
         language: "English",
         rating: 4.3,
         department: "law",
-        image: "./taxlaw.webp"
+        image: "./books/taxlaw.webp"
     },
     {
         id: 6,
@@ -1333,7 +1335,7 @@ location.href="categories.html"
         language: "English",
         rating: 4.5,
         department: "arts",
-        image: "./arts.webp"
+        image: "./books/arts.webp"
     },
     {
         id: 7,
@@ -1350,7 +1352,7 @@ location.href="categories.html"
         language: "English",
         rating: 4.6,
         department: "engineering",
-        image: "./statseng.webp"
+        image: "./books/statseng.webp"
     },
     {
         id: 8,
@@ -1367,7 +1369,7 @@ location.href="categories.html"
         language: "English",
         rating: 4.9,
         department: "medicine",
-        image: "./cellbio.webp"
+        image: "./books/cellbio.webp"
     },
     {
         id: 9,
@@ -1384,7 +1386,7 @@ location.href="categories.html"
         language: "English",
         rating: 4.8,
         department: "computer science",
-        image: "./infosys.webp"
+        image: "./books/infosys.webp"
     },
     {
         id: 10,
@@ -1401,7 +1403,7 @@ location.href="categories.html"
         language: "English",
         rating: 4.2,
         department: "surveying",
-        image: "./surv.webp"
+        image: "./books/surv.webp"
     },
     {
         id: 11,
@@ -1435,7 +1437,7 @@ location.href="categories.html"
         language: "English",
         rating: 4.9,
         department: "surveying",
-        image: "./precsurv.webp"
+        image: "./books/precsurv.webp"
     },
     {
         id: 13,
@@ -1452,7 +1454,7 @@ location.href="categories.html"
         language: "English",
         rating: 4.4,
         department: "medicine",
-        image: "./medicineglance.webp"
+        image: "./books/medicineglance.webp"
     },
     {
         id: 14,
@@ -1469,7 +1471,7 @@ location.href="categories.html"
         language: "English",
         rating: 4.6,
         department: "computer science",
-        image: "./comptsci.webp"
+        image: "./books/comptsci.webp"
     },
     {
         id: 15,

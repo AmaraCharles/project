@@ -432,7 +432,7 @@ if (img) {
 
     console.log(artwork);
     
-  if (artwork.genre === chosenCategory) {
+  if (artwork.department === chosenCategory.toLocaleLowerCase()) {
    
     const artworkJson = encodeURIComponent(JSON.stringify(artwork));
            
